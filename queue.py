@@ -4,9 +4,9 @@ class QUEUE:
     def isempty(self):
         return self.queue==[]
     def enqueue(self,value):
-        return self.queue.insert(0,value)
+        return self.queue.append(value)
     def dequeue(self):
-        return self.queue.pop()
+        return self.queue.pop(0)
 q=QUEUE()
 if (q.isempty()==True):
     print("queue is empty")
@@ -19,7 +19,8 @@ q.enqueue(8)
 q.enqueue(9)
 q.enqueue(4)
 print(q.queue)
-print(q.dequeue())
+print("dequeue=",q.dequeue())
+print(q.queue)
 if (q.isempty()==True):
     print("queue is empty")
 else:
